@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMy_nums_lib.a CMakeFiles/My_nums_lib.dir/src/five.cpp.o
+/usr/bin/ranlib libMy_nums_lib.a
