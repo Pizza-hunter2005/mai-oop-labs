@@ -22,6 +22,7 @@ FetchContent_MakeAvailable(googletest)
 
 
 add_library(${CMAKE_PROJECT_NAME}_lib src/trololo.cpp)
+add_executable(main main.cpp src/trololo.cpp)
 add_executable(${CMAKE_PROJECT_NAME}_exe main.cpp)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
