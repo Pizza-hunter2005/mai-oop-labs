@@ -35,6 +35,7 @@ int main() {
     } catch (const std::invalid_argument& i) {
         std::cout << "Ошибка: " << i.what() << std::endl;
     }
+
     Five sum = num1 + num2 + num3;
     std::cout << "Сумма 1, 2 и 3: ";
     sum.print_num(); // 10003
@@ -80,12 +81,24 @@ int main() {
     
 
     Five num6 = num2;
-    std::cout << "Числу 6 присвоили значение 2: ";
+    std::cout << "\nЧислу 6 присвоили значение 2: ";
     num6.print_num(); // 3402
 
     Five num7(num3);
     std::cout << "Число 3 скопировалось в число 7:  ";
     num7.print_num(); // 1101
+
+    Five num8{1, 2, 3};
+    std::cout << "Число 8 до перемещения: ";
+    num8.print_num(); // 123
+    Five moved{1};
+    std::cout << "Число moved до перемещения: ";
+    moved.print_num(); // 1
+    moved.moving(std::move(num8));
+    std::cout << "Число 8 после перемещения: ";
+    num8.print_num();
+    std::cout << "Число moved после перемещения: ";
+    moved.print_num(); // 123
 
     num2 += num3;
     std::cout << "Число 2 += число 3: "; // 10003

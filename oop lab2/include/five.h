@@ -12,14 +12,16 @@ public:
     Five();
     Five(const std::string &t);
     Five(const std::initializer_list<unsigned char> &t);
+
     // Копирование
     Five(const Five &other);
+
     // Деструктор
     ~Five();
 
-    // Операторы присваивания
+    // Оператор присваивания
     Five& operator=(const Five &other);
-
+    
     // Арифметические операции
     Five operator+(const Five &other) const;
     Five operator-(const Five &other) const;
@@ -36,6 +38,8 @@ public:
 
     // Вывод числа
     void print_num() const;
+    // Перемещение
+    void moving(Five &&other) noexcept;
 
 private:
     // Числа будем хранить в обратном порядке (от наименьшего разряда к наибольшему) для удобства реализации арифметических операций

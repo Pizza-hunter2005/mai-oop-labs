@@ -33,7 +33,7 @@ Five::Five(const Five &other) : digits(other.digits) {}
 // Деструктор
 Five::~Five() = default;
 
-// Оператор копирования
+// Оператор присваивания
 Five& Five::operator=(const Five &other) {
     if (this != &other) {
         digits = other.digits;
@@ -41,6 +41,13 @@ Five& Five::operator=(const Five &other) {
     return *this;
 }
 
+// Перемещение
+void Five::moving(Five &&other) noexcept {
+    if (this != &other) {
+        digits = other.digits;
+        other.digits = {};
+    }
+}
 
 // Арифметическая операция сложения
 Five Five::operator+(const Five &other) const {
