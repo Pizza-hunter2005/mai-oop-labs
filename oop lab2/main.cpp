@@ -90,15 +90,12 @@ int main() {
 
     Five num8{1, 2, 3};
     std::cout << "Число 8 до перемещения: ";
-    num8.print_num(); // 123
-    Five moved{1};
-    std::cout << "Число moved до перемещения: ";
-    moved.print_num(); // 1
-    moved.moving(std::move(num8));
-    std::cout << "Число 8 после перемещения: ";
-    num8.print_num();
+    num8.print_num();  // 123
+    Five moved(std::move(num8));
     std::cout << "Число moved после перемещения: ";
-    moved.print_num(); // 123
+    moved.print_num();  // 123
+    std::cout << "Число num8 после перемещения: ";
+    num8.print_num();  // Пусто
 
     num2 += num3;
     std::cout << "Число 2 += число 3: "; // 10003

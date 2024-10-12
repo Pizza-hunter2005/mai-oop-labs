@@ -29,6 +29,10 @@ Five::Five(const std::initializer_list<unsigned char> &t) {
 // Конструктор копирования
 Five::Five(const Five &other) : digits(other.digits) {}
 
+// Конструктор перемещения
+Five::Five(Five&& other) noexcept : digits(std::move(other.digits)) {
+    other.digits.clear();
+}
 
 // Деструктор
 Five::~Five() = default;
@@ -41,13 +45,15 @@ Five& Five::operator=(const Five &other) {
     return *this;
 }
 
-// Перемещение
-void Five::moving(Five &&other) noexcept {
-    if (this != &other) {
-        digits = other.digits;
-        other.digits = {};
+// Оператор перемещения
+Five& Five::operator=(Five&& other) noexcept {
+    if (this != &other) {  
+        digits = std::move(other.digits);  
+        other.digits.clear(); 
     }
+    return *this; 
 }
+
 
 // Арифметическая операция сложения
 Five Five::operator+(const Five &other) const {

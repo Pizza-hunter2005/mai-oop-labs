@@ -15,13 +15,16 @@ public:
 
     // Копирование
     Five(const Five &other);
-
+ // Конструктор перемещения
+    
+    Five(Five&& other) noexcept;
     // Деструктор
     ~Five();
 
     // Оператор присваивания
     Five& operator=(const Five &other);
-    
+    // Оператор перемещения
+    Five& operator=(Five&& other) noexcept; 
     // Арифметические операции
     Five operator+(const Five &other) const;
     Five operator-(const Five &other) const;
@@ -38,9 +41,7 @@ public:
 
     // Вывод числа
     void print_num() const;
-    // Перемещение
-    void moving(Five &&other) noexcept;
-
+ 
 private:
     // Числа будем хранить в обратном порядке (от наименьшего разряда к наибольшему) для удобства реализации арифметических операций
     std::vector<unsigned char> digits; 
