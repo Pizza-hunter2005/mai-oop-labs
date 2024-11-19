@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule
+/root/mai-oop-labs/oop lab5/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule
