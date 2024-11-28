@@ -59,9 +59,6 @@ void NPC::accept(class BattleVisitor& v, NPC& fighter, NPC& target) {
     if (v.fight(fighter, target)) {
         std::cout << fighter.getName() << " wins " << target.getName() << std::endl;
     }
-    else {
-        std::cout << fighter.getName() << " can't win " << target.getName() << std::endl;
-    }
     return;
 }
 
@@ -138,12 +135,22 @@ public:
     void battle(int range) {
         BattleVisitor v;
         for (size_t i = 0; i < npcs.size(); ++i) {
-            for (size_t j = 0; j < npcs.size(); ++j) {
-                if (j == i) continue;
+            for (size_t j = 0; j < npcs.size();) {
+                if (j == i) {++j; continue;}
                 int dx = npcs[i]->getX() - npcs[j]->getX();
                 int dy = npcs[i]->getY() - npcs[j]->getY();
                 if (sqrt(dx * dx + dy * dy) <= range) {
-                    npcs[i]->accept(v,*npcs[i], *npcs[j]);
+                    if (v.fight(*npcs[i], *npcs[j])) {
+                        std::cout << npcs[i]->getName() << " wins " << npcs[j]->getName() << std::endl;
+                        npcs.erase(npcs.begin() + j);
+                    } else {
+                        std::cout << npcs[j]->getName() << " wins " << npcs[i]->getName() << std::endl;
+                        npcs.erase(npcs.begin() + i);
+                        --i; 
+                        break;
+                    }
+                } else {
+                    ++j;
                 }
             }
         }

@@ -67,7 +67,10 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "C_Cpp.default.cppStandard": "c++20",
-        "C_Cpp.default.intelliSenseMode": "gcc-x64",  // или "clang-x64" в зависимости от вашего компилятора
-        "C_Cpp.default.compilerPath": "/usr/bin/g++"
-    }
+        "C_Cpp.default.intelliSenseMode": "gcc-x64",
+        "C_Cpp.default.compilerPath": "/usr/bin/g++",
+        "shared_mutex": "cpp"
+    },
+    "cmake.sourceDirectory": "/root/mai-oop-labs/oop lab1",
+    "C_Cpp.errorSquiggles": "disabled"
 }

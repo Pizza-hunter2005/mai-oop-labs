@@ -53,18 +53,17 @@ TEST(DungeonEditorTest, Battle) {
     editor.battle(10);
     std::string output = testing::internal::GetCapturedStdout();
 
-    EXPECT_TRUE(output.find("Squirrel_1 can't win Trader_1") != std::string::npos);
+    EXPECT_TRUE(output.find("Trader_1 wins Squirrel_1") != std::string::npos);
 }
 
 TEST(DungeonEditorTest, BattleMultipleNPCs) {
-    DungeonEditor editor;
+     DungeonEditor editor;
     editor.addNPC("Squirrel", "Squirrel_1", 100, 100);
     editor.addNPC("SlaveTrader", "Trader_1", 105, 105);
     editor.addNPC("Knight", "Knight_1", 110, 110);
     editor.addNPC("Squirrel", "Squirrel_2", 200, 200);
     editor.addNPC("SlaveTrader", "Trader_2", 150, 150);
 
-    editor.battle(15);
     testing::internal::CaptureStdout();
     editor.battle(15);
     std::string output = testing::internal::GetCapturedStdout();

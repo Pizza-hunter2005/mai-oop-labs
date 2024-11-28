@@ -26,8 +26,6 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 
-
-
 enable_testing()
 add_executable(tests tests/test.cpp)
 target_include_directories(tests PRIVATE include)
