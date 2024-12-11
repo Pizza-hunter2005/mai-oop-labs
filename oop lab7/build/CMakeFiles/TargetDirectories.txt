@@ -1,0 +1,4 @@
+/root/mai-oop-labs/oop lab7/build/CMakeFiles/tests.dir
+/root/mai-oop-labs/oop lab7/build/CMakeFiles/test.dir
+/root/mai-oop-labs/oop lab7/build/CMakeFiles/edit_cache.dir
+/root/mai-oop-labs/oop lab7/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++  -Werror=maybe-uninitialized CMakeFiles/tests.dir/tests/test.cpp.o -o tests  -lgtest -lgtest_main 
